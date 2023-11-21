@@ -1,0 +1,127 @@
+body {
+  width: 1510px;
+  margin: 0px auto;
+}
+*,
+::before,
+:after,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* --------------------------------------Activebox------------------------------- */
+.active__box {
+    width: 1510px;
+    height: 747px;
+    background-image: url(./img/activebox/background.svg);
+    position: relative;
+}
+.background_color {
+    width: 1510px;
+    height: 747px;
+    opacity: 80%;
+    background: #252B49;
+    position: absolute;
+}
+.active__box_header {
+    width: 1510px;
+    height: 100.95px;
+}
+.active__box_header-logo {
+    margin-left: 170px;
+}
+.active__box_header::after {
+    content: '';
+    width: 1170px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+.active__box_header-navigation {
+    width: 670px;
+    height: 63px;
+    display: flex;
+    margin-left: 670px;
+    padding-top: 8px;
+}
+.navigation_link {
+    width: 134px;
+    height: 55px;
+    text-decoration: none;
+}
+.navigation_link:hover {
+    border-bottom: 2px solid #BABBC5;
+}
+.navigation_link:active {
+    border-bottom: 2px solid #E71414;
+}
+.navigation_content {
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+}
+.navigation_content:active {
+    color:#E71414;
+}
+.content_title {
+    font-family: Raleway;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 129.5px;
+}
+.content_text {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#FFFFFF;
+    margin-top: 31.43px;
+}
+.content_button-link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 79.57px;
+}
+.content_button {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    width: 369px;
+    height: 77.58px;
+    background: #FF4343;
+    cursor: pointer;
+    border: none;
+}
+.content_button:hover {
+    background: #E71414;
+}
+.content_button:active {
+    background: #FF4343;
+    box-shadow: 4px 4px 30px 0px #FF4343;
+}
+/* --------------------------------------Activebox------------------------------- */
