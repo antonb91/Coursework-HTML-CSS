@@ -18,110 +18,552 @@ h6 {
 }
 /* --------------------------------------Activebox------------------------------- */
 .active__box {
-    width: 1510px;
-    height: 747px;
-    background-image: url(./img/activebox/background.svg);
-    position: relative;
+  width: 1510px;
+  height: 747px;
+  background-image: url(./img/activebox/background.svg);
+  position: relative;
 }
 .background_color {
-    width: 1510px;
-    height: 747px;
-    opacity: 80%;
-    background: #252B49;
-    position: absolute;
+  width: 1510px;
+  height: 747px;
+  opacity: 80%;
+  background: #252b49;
+  position: absolute;
 }
 .active__box_header {
-    width: 1510px;
-    height: 100.95px;
-}
-.active__box_header-logo {
-    margin-left: 170px;
-}
-.active__box_header::after {
-    content: '';
-    width: 1170px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    border: 1px solid white;
+  width: 1170px;
+  height: 100.95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .active__box_header-navigation {
-    width: 670px;
-    height: 63px;
-    display: flex;
-    margin-left: 670px;
-    padding-top: 8px;
+  width: 670px;
+  height: 100%;
+  display: flex;
+  padding-top: 8px;
 }
 .navigation_link {
-    width: 134px;
-    height: 55px;
-    text-decoration: none;
+  width: 134px;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  color: white;
 }
 .navigation_link:hover {
-    border-bottom: 2px solid #BABBC5;
+  border-bottom-color: #babbc5;
 }
 .navigation_link:active {
-    border-bottom: 2px solid #E71414;
+  color: #e71414;
+  border-bottom: 2px solid #e71414;
 }
 .navigation_content {
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.content_title {
+  font-family: Raleway;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 230px;
+}
+.content_text {
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 31.43px;
+}
+.content_button-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 79.57px;
+}
+.content_button {
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  width: 369px;
+  height: 77.58px;
+  background: #ff4343;
+  cursor: pointer;
+  border: none;
+}
+.content_button:hover {
+  background: #e71414;
+}
+.content_button:active {
+  background: #ff4343;
+  box-shadow: 4px 4px 30px 0px #ff4343;
+}
+/* --------------------------------------Activebox------------------------------- */
+
+/* --------------------------------------Features------------------------------- */
+.features {
+  width: 1510px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.features__boxes {
+  width: 1170px;
+  height: 717px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 116px;
+  margin-bottom: 116px;
+}
+.features__boxes-item {
+  text-align: center;
+  width: 370px;
+  height: 324px;
+}
+.item_pic {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 29px;
+}
+.item_title {
+  width: 370px;
+  height: 72px;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0em;
+  color: #2d3033;
+  margin-bottom: 20.43px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item_text {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #6c7279;
+}
+/* --------------------------------------Features------------------------------- */
+
+/* --------------------------------------Work------------------------------- */
+.work {
+  width: 1530px;
+  height: 678px;
+  margin-top: -50px;
+}
+.example_pic {
+  display: flex;
+}
+.work__example {
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+    text-align: center;
+    padding: 0;
+}
+.work__example li {
+    position: relative;
+    width: 378px; /* Задаем ширину элемента списка с картинкой*/
+    overflow: hidden;
+    text-decoration: none;
+}
+/* Заголовок, текст и ссылка */
+.work__example li h4 {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    text-decoration: none;
     text-transform: uppercase;
+}
+.work__example li h5 {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#ffffff;
+    text-decoration: none;
+}
+/* Выезжающий блок с текстом для панели слева направо */
+.effect-to-right {
+    display: flex;
+    text-decoration: none;
+}
+.work__example li > div.effect-to-right {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.work__example li:hover > div.effect-to-right {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.work__example li div.effect-to-right {
+    opacity: .8;
+    background: linear-gradient(0deg, rgba(255, 67, 67, 0.8), rgba(255, 67, 67, 0.8)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF); /* Фон блока при наведении */
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+    transform: translate(0px, 250px) rotate(0deg); /* Направление выезжающей панели */
+}
+.work__example li:hover div.effect-to-right {
+    opacity: .8;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+.work__example li:active div.effect-to-right {
+    opacity: .8;
+    transform: translate(0px, 0px) rotate(0deg);
+    background: linear-gradient(0deg, rgba(185, 12, 12, 0.8), rgba(185, 12, 12, 0.8)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+/* --------------------------------------Work------------------------------- */
+
+/* --------------------------------------Team------------------------------- */
+.team {
+    width: 1510px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 114px;
+  }
+.team__person {
+    width: 1170px;
+    height: 619px;
+    top: 2488px;
+    left: 170px;
+    margin-top: 114px;
+    display: flex;
+    gap: 30px;
+}
+.team__person__card {
+    width: 270px;
+    height: 619px;
+    top: 2488px;
+    left: 170px;
+}
+.card__pic {
+    margin-bottom: 30px;
+}
+.card__name {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(45, 48, 51, 1);
+    margin-bottom: 5.29px;
+}
+.card__job {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 67, 67, 1);
+    text-transform: uppercase;
+    margin-bottom: 17.86px;
+}
+.card__desc {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(108, 114, 121, 1);
+    margin-bottom: 37.86px;
+}
+.card__socialnetwork {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.socialnework__link {
+    transition: all 0.5s linear;
+}
+.socialnework__link:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+@media (max-width:320px) {
+  .team {
+    width: 25%;
+  }
+  item-wrapper {
+    flex-wrap: wrap;
+  }
+}
+/* --------------------------------------Team------------------------------- */
+
+/* --------------------------------------Testimonials------------------------------- */
+.testimonials {
+    width: 1511px;
+    height: 535px;
+}
+.testimonials__main {
+    width: 1511px;
+    height: 490px;
+    background-image: url(./img/testimonials/bg\ \(1\).svg);
+    display: flex;
+}
+.main__pic {
+    display: flex;
+    justify-content: left;
+}
+.main__article {
+    margin: 130px 0 0 129px;
+}
+.article__text_1 {
+    width: 471px;
+    height: 230px;
+    font-family: Cardo;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: -10px;
+}
+.article__text_2 {
     font-family: Raleway;
     font-size: 13px;
     font-weight: 700;
     line-height: 15px;
     letter-spacing: 0em;
-    text-align: center;
-    color: white;
-}
-.navigation_content:active {
-    color:#E71414;
-}
-.content_title {
-    font-family: Raleway;
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 75px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #FFFFFF;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
-    margin-top: 129.5px;
 }
-.content_text {
-    font-family: Raleway;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    color:#FFFFFF;
-    margin-top: 31.43px;
-}
-.content_button-link {
+.dots__footer {
     display: flex;
     justify-content: center;
-    text-decoration: none;
-    margin-top: 79.57px;
+    width: 1511px;
+    height: 45px; 
 }
-.content_button {
+.dots {
+    height: 14px;
+}
+.dots__pic {
+    margin-right: 25px;
+    margin-top: 31px;
+}
+/* --------------------------------------Testimonials------------------------------- */
+
+/* --------------------------------------Download------------------------------- */
+.download {
+    width: 1511px;
+    height: auto;
+    margin-bottom: 114px;
+}
+.download__content {
+    width: 1170px;
+    height: 224px;
+    margin: 114px 0 0 170px; 
+}
+.content__text_1 {
+    width: 1170px;
+    height: 70px;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+}
+.content__text_2 {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 47.71px;
+}
+.content__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 369px;
+    height: 77.58px;
+    background: rgba(255, 67, 67, 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+.content__btn__text {
     font-family: Raleway;
     font-size: 24px;
     font-weight: 900;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FFFFFF;
-    width: 369px;
-    height: 77.58px;
-    background: #FF4343;
-    cursor: pointer;
-    border: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1); 
 }
-.content_button:hover {
-    background: #E71414;
+.content__btn:hover {
+  background: #e71414;
 }
-.content_button:active {
-    background: #FF4343;
-    box-shadow: 4px 4px 30px 0px #FF4343;
+.content__btn:active {
+  background: #ff4343;
+  box-shadow: 4px 4px 30px 0px #ff4343;
 }
-/* --------------------------------------Activebox------------------------------- */
+/* --------------------------------------Download------------------------------- */
+
+/* --------------------------------------Footer------------------------------- */
+.footer {
+  width: 1511px;
+  height: 340px;
+}
+.footer__upper {
+  width: 1511px;
+  height: 250px;
+  background: rgba(53, 60, 101, 1);
+  display: flex;
+  gap: 30px;
+}
+.footer__upper__location {
+  width: 370px;
+  height: 71px;
+  margin: 71.14px 0 0 171px;
+}
+.location__title {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+.location__address {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.footer__upper__social {
+  width: 370px;
+  height: 108.86px;
+  margin-top:  71.14px;
+}
+.social__network {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  padding-left: 101px;
+}
+.social__title {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom:  48.86px;
+}
+.social__link {
+  transition: all 0.5s linear;
+}
+.social__link:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.footer__upper__about {
+  width: 370px;
+  height: 112.71px;
+  margin-top: 71.14px;
+}
+.about__title {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-bottom: 28.71px;
+}
+.about__text {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.footer__lower {
+  width: 1511px;
+  height: 90px;
+  background: rgba(44, 49, 84, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower__text {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color:rgba(128, 128, 128, 1);
+}
+span {
+  color: rgba(255, 255, 255, 1);
+}
+/* --------------------------------------Footer------------------------------- */
