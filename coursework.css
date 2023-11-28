@@ -22,6 +22,7 @@ h6 {
   height: 747px;
   background-image: url(./img/activebox/background.svg);
   position: relative;
+  z-index: 2;
 }
 .background_color {
   width: 1510px;
@@ -29,6 +30,7 @@ h6 {
   opacity: 80%;
   background: #252b49;
   position: absolute;
+  z-index: 1;
 }
 .active__box_header {
   width: 1170px;
@@ -37,7 +39,9 @@ h6 {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid white;
-  position: absolute;
+  position: relative;
+  z-index: 2;
+
   left: 50%;
   transform: translateX(-50%);
 }
@@ -73,6 +77,14 @@ h6 {
   letter-spacing: 0em;
   text-align: center;
 }
+.active__box_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
 .content_title {
   font-family: Raleway;
   font-size: 64px;
@@ -82,7 +94,7 @@ h6 {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  margin-top: 230px;
+  margin-top: 130px;
 }
 .content_text {
   font-family: Raleway;
@@ -182,151 +194,162 @@ h6 {
 .example_pic {
   display: flex;
 }
+.example_link {
+  text-decoration: none;
+}
 .work__example {
-    display: flex;
-    flex-wrap: wrap;
-    list-style:none;
-    text-align: center;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 .work__example li {
-    position: relative;
-    width: 378px; /* Задаем ширину элемента списка с картинкой*/
-    overflow: hidden;
-    text-decoration: none;
+  position: relative;
+  width: 378px; /* Задаем ширину элемента списка с картинкой*/
+  overflow: hidden;
+  text-decoration: none;
 }
 /* Заголовок, текст и ссылка */
 .work__example li h4 {
-    font-family: Raleway;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-    margin-bottom: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .work__example li h5 {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    color:#ffffff;
-    text-decoration: none;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
 }
 /* Выезжающий блок с текстом для панели слева направо */
 .effect-to-right {
-    display: flex;
-    text-decoration: none;
+  display: flex;
+  text-decoration: none;
 }
 .work__example li > div.effect-to-right {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .work__example li:hover > div.effect-to-right {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 .work__example li div.effect-to-right {
-    opacity: .8;
-    background: linear-gradient(0deg, rgba(255, 67, 67, 0.8), rgba(255, 67, 67, 0.8)),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF); /* Фон блока при наведении */
-    transition: all 0.4s ease-in-out;
-    color: #fff;
-    transform: translate(0px, 250px) rotate(0deg); /* Направление выезжающей панели */
+  opacity: 0.8;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 67, 67, 0.8),
+      rgba(255, 67, 67, 0.8)
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff); /* Фон блока при наведении */
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+  transform: translate(0px, 250px) rotate(0deg); /* Направление выезжающей панели */
 }
 .work__example li:hover div.effect-to-right {
-    opacity: .8;
-    transform: translate(0px, 0px) rotate(0deg);
+  opacity: 0.8;
+  transform: translate(0px, 0px) rotate(0deg);
 }
 .work__example li:active div.effect-to-right {
-    opacity: .8;
-    transform: translate(0px, 0px) rotate(0deg);
-    background: linear-gradient(0deg, rgba(185, 12, 12, 0.8), rgba(185, 12, 12, 0.8)),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  opacity: 0.8;
+  transform: translate(0px, 0px) rotate(0deg);
+  background: linear-gradient(
+      0deg,
+      rgba(185, 12, 12, 0.8),
+      rgba(185, 12, 12, 0.8)
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff);
 }
 /* --------------------------------------Work------------------------------- */
 
 /* --------------------------------------Team------------------------------- */
 .team {
-    width: 1510px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 114px;
-  }
+  width: 1510px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 114px;
+}
 .team__person {
-    width: 1170px;
-    height: 619px;
-    top: 2488px;
-    left: 170px;
-    margin-top: 114px;
-    display: flex;
-    gap: 30px;
+  width: 1170px;
+  height: 619px;
+  top: 2488px;
+  left: 170px;
+  margin-top: 114px;
+  display: flex;
+  gap: 30px;
 }
 .team__person__card {
-    width: 270px;
-    height: 619px;
-    top: 2488px;
-    left: 170px;
+  width: 270px;
+  height: 619px;
+  top: 2488px;
+  left: 170px;
 }
 .card__pic {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .card__name {
-    font-family: Raleway;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(45, 48, 51, 1);
-    margin-bottom: 5.29px;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(45, 48, 51, 1);
+  margin-bottom: 5.29px;
 }
 .card__job {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(255, 67, 67, 1);
-    text-transform: uppercase;
-    margin-bottom: 17.86px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 67, 67, 1);
+  text-transform: uppercase;
+  margin-bottom: 17.86px;
 }
 .card__desc {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(108, 114, 121, 1);
-    margin-bottom: 37.86px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(108, 114, 121, 1);
+  margin-bottom: 37.86px;
 }
 .card__socialnetwork {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .socialnework__link {
-    transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .socialnework__link:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+  transform: scale(1.2);
+  cursor: pointer;
 }
-@media (max-width:320px) {
+@media (max-width: 320px) {
   .team {
     width: 25%;
   }
@@ -338,113 +361,113 @@ h6 {
 
 /* --------------------------------------Testimonials------------------------------- */
 .testimonials {
-    width: 1511px;
-    height: 535px;
+  width: 1511px;
+  height: 535px;
 }
 .testimonials__main {
-    width: 1511px;
-    height: 490px;
-    background-image: url(./img/testimonials/bg\ \(1\).svg);
-    display: flex;
+  width: 1511px;
+  height: 490px;
+  background-image: url(./img/testimonials/frame.svg);
+  display: flex;
 }
 .main__pic {
-    display: flex;
-    justify-content: left;
+  display: flex;
+  justify-content: left;
 }
 .main__article {
-    margin: 130px 0 0 129px;
+  margin: 130px 0 0 129px;
 }
 .article__text_1 {
-    width: 471px;
-    height: 230px;
-    font-family: Cardo;
-    font-size: 36px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 49px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(255, 255, 255, 1);
-    margin-bottom: -10px;
+  width: 471px;
+  height: 230px;
+  font-family: Cardo;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: -10px;
 }
 .article__text_2 {
-    font-family: Raleway;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 15px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
+  font-family: Raleway;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
 }
 .dots__footer {
-    display: flex;
-    justify-content: center;
-    width: 1511px;
-    height: 45px; 
+  display: flex;
+  justify-content: center;
+  width: 1511px;
+  height: 45px;
 }
 .dots {
-    height: 14px;
+  height: 14px;
 }
 .dots__pic {
-    margin-right: 25px;
-    margin-top: 31px;
+  margin-right: 25px;
+  margin-top: 31px;
 }
 /* --------------------------------------Testimonials------------------------------- */
 
 /* --------------------------------------Download------------------------------- */
 .download {
-    width: 1511px;
-    height: auto;
-    margin-bottom: 114px;
+  width: 1511px;
+  height: auto;
+  margin-bottom: 114px;
 }
 .download__content {
-    width: 1170px;
-    height: 224px;
-    margin: 114px 0 0 170px; 
+  width: 1170px;
+  height: 224px;
+  margin: 114px 0 0 170px;
 }
 .content__text_1 {
-    width: 1170px;
-    height: 70px;
-    font-family: Raleway;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 35px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: rgba(0, 0, 0, 1);
+  width: 1170px;
+  height: 70px;
+  font-family: Raleway;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
 }
 .content__text_2 {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 1);
-    margin-bottom: 47.71px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 47.71px;
 }
 .content__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 369px;
-    height: 77.58px;
-    background: rgba(255, 67, 67, 1);
-    text-decoration: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 369px;
+  height: 77.58px;
+  background: rgba(255, 67, 67, 1);
+  text-decoration: none;
+  cursor: pointer;
 }
 .content__btn__text {
-    font-family: Raleway;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1); 
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
 }
 .content__btn:hover {
   background: #e71414;
@@ -495,7 +518,7 @@ h6 {
 .footer__upper__social {
   width: 370px;
   height: 108.86px;
-  margin-top:  71.14px;
+  margin-top: 71.14px;
 }
 .social__network {
   display: flex;
@@ -512,7 +535,7 @@ h6 {
   text-align: center;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
-  margin-bottom:  48.86px;
+  margin-bottom: 48.86px;
 }
 .social__link {
   transition: all 0.5s linear;
@@ -561,7 +584,7 @@ h6 {
   line-height: 21px;
   letter-spacing: 0em;
   text-align: center;
-  color:rgba(128, 128, 128, 1);
+  color: rgba(128, 128, 128, 1);
 }
 span {
   color: rgba(255, 255, 255, 1);
