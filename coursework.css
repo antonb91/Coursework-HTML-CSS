@@ -143,12 +143,13 @@ h6 {
   justify-content: center;
 }
 .features__boxes {
-  width: 1170px;
+  width: 1172px;
   height: 717px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 116px;
   margin-bottom: 116px;
+  column-gap: 31px;
 }
 .features__boxes-item {
   text-align: center;
@@ -211,7 +212,7 @@ h6 {
   text-decoration: none;
 }
 /* Заголовок, текст и ссылка */
-.work__example li h4 {
+.link-title {
   font-family: Raleway;
   font-size: 24px;
   font-weight: 900;
@@ -223,7 +224,7 @@ h6 {
   text-decoration: none;
   text-transform: uppercase;
 }
-.work__example li h5 {
+.link-text {
   font-family: Raleway;
   font-size: 18px;
   font-weight: 400;
@@ -348,14 +349,6 @@ h6 {
 .socialnework__link:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-@media (max-width: 320px) {
-  .team {
-    width: 25%;
-  }
-  item-wrapper {
-    flex-wrap: wrap;
-  }
 }
 /* --------------------------------------Team------------------------------- */
 
@@ -590,3 +583,378 @@ span {
   color: rgba(255, 255, 255, 1);
 }
 /* --------------------------------------Footer------------------------------- */
+
+/* --------------------------------------Mobile------------------------------- */
+@media only screen and (max-width:320px) {
+  body {
+    width: 320px;         
+  }
+  .active__box {
+    width: 320px;
+    height: 574px; 
+  }
+  .background_color {
+    width: 320px;
+    height: 574px; 
+  }
+  .active__box_header {
+    width: 280px;
+    height: 56.28px;
+    border: none;           
+  }
+  .header__icon-1 {
+    width: 67.78px;
+    height: 14.35px;
+  }
+.header__icon-2 {
+    width: 34px;
+    height: 14.34px;
+  }
+  .active__box_header-navigation {
+    display: none;
+  }
+  .content_title {
+    width: 280px;
+    height: 210px;
+    font-family: Raleway;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    line-height: 42.26px;
+    margin: 49.72px 0 0 0;
+  }
+  .content_text {
+    width: 280px;
+    height: 64px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: -35px;
+  }
+  .content_button {
+    font-size: 24px;
+    font-family: Raleway;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 280px;
+    height: 60px;
+  }
+  .features {
+    width: 320px;
+    height: 1670.15px;
+  }
+  .features__boxes {
+    width: 280.84px;
+    height: 1542.15px;
+    margin-top: 40px;
+  }
+  .features__boxes-item {
+    width: 279px;
+    height: 221.54px;
+  }
+  .item_pic {
+    width: 75.29px;
+    height: 74.37px;
+    margin-bottom: 21.72px;
+  }
+  .item_title {
+    width: 279.84px;
+    height: 53.97px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .item_text {
+    width: 279.84px;
+    height: 80px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 41.46px;
+  }
+  .work {
+    width: 320px;
+    height: 576px;
+  }
+  .work__example {
+    width: 320px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+  }
+  .example_pic {
+    width: 160px;
+    height: 144px;
+  }
+  .effect-to-right {
+    width: 160px;
+    height: 144px;
+  }
+  .example_link {
+    width: 160px;
+    height: 144px;
+    display: flex;
+    align-items: center;
+  }
+  li {
+    width: 160px;
+    height: 144px;
+  }
+  .link-title {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .link-text {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .team {
+    width: 320px;
+    height: 1670.15px;
+  }
+  .team__person {
+    width: 280px;
+    height: 2252px;
+    display: flex;
+    flex-direction: column;
+  }
+  .team__person__card {
+    width: 280px;
+    height: 521px;
+  }
+  .card__pic {
+    width: 280px;
+    height: 227.25px;
+    padding-right: 50px;  
+  }
+  .card__name {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .card__job {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .card__desc {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;    
+  }
+  .card__socialnetwork {
+    width: 130px;
+    height: 39.61px;
+  }
+  .facebook__pic {
+    width: 39.61px;
+    height: 39.61px;
+  }
+  .testimonials {
+    width: 320px;
+    height: 570.49px;
+    margin-top: 550px;
+  }
+  .testimonials__main {
+    width: 320px;
+    height: 538px;
+    display: flex;
+    flex-direction: column;
+  }
+  .pic {
+    width: 320px;
+    height: 212px;
+  }
+  .article__text_1 {
+    width: 275px;
+    height: 206px;
+    font-family: Cardo;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .article__text_2 {
+    width: 275px;
+    height: 25px;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .dots__footer {
+    width: 129.49px;
+    height: 9.49px;
+    display: flex;
+    justify-content: center;
+  }
+  .download {
+    width: 320px;
+    height: auto;
+    display: flex;
+    margin-left: -150px;
+    margin-bottom: 45px;
+  }
+  .download__content {
+    width: 280px;
+    height: 204px;
+  }
+  .content__text_1 {
+    width: 280px;
+    height: 80px;
+    top: 5700px;
+    left: 20px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .content__text_2 {
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 11px;
+  }
+  .content__btn {
+    width: 278.25px;
+    height: 77.58px;
+  }
+  .content__btn__text {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .footer {
+    width: 320px;
+    height: 540px;
+  }
+  .footer__upper {
+    width: 320px; 
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer__upper__location {
+    width: 280px;
+    height: 66px;
+    margin-top: 34.14px;
+    margin-left: 20px;
+  }
+  .location__title {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .location__address {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center; 
+  }
+  .footer__upper__social {
+    width: 279px;
+    height: 85.71px;
+    margin-top: 36.7px;
+  }
+  .social__title {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .social__link {
+    width: 33px;
+    height: 33px;
+  }
+  .footer__upper__about {
+    width: 279px;
+    height: 102.71px;
+    margin-top: 59.5px; 
+  }
+  .about__title {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 38.71px;
+  }
+  .about__text {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center; 
+  }
+  .footer__lower {
+    width: 320px;
+    height: 90px;
+  }
+  .lower__text {
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+
+
+
+
+  
+}
