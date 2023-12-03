@@ -41,7 +41,6 @@ h6 {
   border-bottom: 1px solid white;
   position: relative;
   z-index: 2;
-
   left: 50%;
   transform: translateX(-50%);
 }
@@ -207,11 +206,9 @@ h6 {
 }
 .work__example li {
   position: relative;
-  width: 378px; /* Задаем ширину элемента списка с картинкой*/
   overflow: hidden;
   text-decoration: none;
 }
-/* Заголовок, текст и ссылка */
 .link-title {
   font-family: Raleway;
   font-size: 24px;
@@ -234,12 +231,18 @@ h6 {
   color: #ffffff;
   text-decoration: none;
 }
-/* Выезжающий блок с текстом для панели слева направо */
-.effect-to-right {
-  display: flex;
-  text-decoration: none;
+li {
+  height: 340px;
 }
-.work__example li > div.effect-to-right {
+.effect-to-right {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.work__example li > a.effect-to-right {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -247,29 +250,29 @@ h6 {
   justify-content: center;
   flex-direction: column;
 }
-.work__example li:hover > div.effect-to-right {
+.work__example li:hover > a.effect-to-right {
   position: absolute;
   overflow: hidden;
   top: 0;
   left: 0;
 }
-.work__example li div.effect-to-right {
+.work__example li a.effect-to-right {
   opacity: 0.8;
   background: linear-gradient(
       0deg,
       rgba(255, 67, 67, 0.8),
       rgba(255, 67, 67, 0.8)
     ),
-    linear-gradient(0deg, #ffffff, #ffffff); /* Фон блока при наведении */
+    linear-gradient(0deg, #ffffff, #ffffff);
   transition: all 0.4s ease-in-out;
   color: #fff;
-  transform: translate(0px, 250px) rotate(0deg); /* Направление выезжающей панели */
+  transform: translate(0px, 250px) rotate(0deg);
 }
-.work__example li:hover div.effect-to-right {
+.work__example li:hover a.effect-to-right {
   opacity: 0.8;
   transform: translate(0px, 0px) rotate(0deg);
 }
-.work__example li:active div.effect-to-right {
+.work__example li:active a.effect-to-right {
   opacity: 0.8;
   transform: translate(0px, 0px) rotate(0deg);
   background: linear-gradient(
@@ -358,9 +361,6 @@ h6 {
   height: 535px;
 }
 .testimonials__main {
-  width: 1511px;
-  height: 490px;
-  background-image: url(./img/testimonials/frame.svg);
   display: flex;
 }
 .main__pic {
@@ -368,7 +368,10 @@ h6 {
   justify-content: left;
 }
 .main__article {
-  margin: 130px 0 0 129px;
+  width: 770px;
+  height: 490px;
+  background: #5c3249;
+  padding: 116px 0 0 129px;
 }
 .article__text_1 {
   width: 471px;
@@ -381,7 +384,6 @@ h6 {
   letter-spacing: 0em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
-  margin-bottom: -10px;
 }
 .article__text_2 {
   font-family: Raleway;
@@ -585,30 +587,30 @@ span {
 /* --------------------------------------Footer------------------------------- */
 
 /* --------------------------------------Mobile------------------------------- */
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 327px) {
   body {
-    width: 320px;         
+    width: 320px;
   }
   .active__box {
-    width: 320px;
-    height: 574px; 
+    width: 100%;
+    height: 574px;
   }
   .background_color {
     width: 320px;
-    height: 574px; 
+    height: 574px;
   }
   .active__box_header {
-    width: 280px;
+    width: 100%;
     height: 56.28px;
-    border: none;           
+    border: none;
   }
   .header__icon-1 {
-    width: 67.78px;
     height: 14.35px;
+    padding-left: 20px;
   }
-.header__icon-2 {
-    width: 34px;
+  .header__icon-2 {
     height: 14.34px;
+    margin-left: 0;
   }
   .active__box_header-navigation {
     display: none;
@@ -645,7 +647,7 @@ span {
     height: 60px;
   }
   .features {
-    width: 320px;
+    width: 100%;
     height: 1670.15px;
   }
   .features__boxes {
@@ -685,14 +687,12 @@ span {
     margin-bottom: 41.46px;
   }
   .work {
-    width: 320px;
+    width: 100%;
     height: 576px;
   }
   .work__example {
     width: 320px;
     height: 576px;
-    display: flex;
-    flex-direction: column;
   }
   .example_pic {
     width: 160px;
@@ -707,10 +707,23 @@ span {
     height: 144px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.63px;
   }
   li {
     width: 160px;
     height: 144px;
+  }
+  .work__example li:active a.effect-to-right {
+    opacity: 0.8;
+    transform: translate(0px, 0px) rotate(0deg);
+    background: linear-gradient(
+        0deg,
+        rgba(185, 12, 12, 0.8),
+        rgba(185, 12, 12, 0.8)
+      ),
+      linear-gradient(0deg, #ffffff, #ffffff);
   }
   .link-title {
     font-family: Raleway;
@@ -719,6 +732,7 @@ span {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: center;
+    margin: 0;
   }
   .link-text {
     font-family: Raleway;
@@ -729,23 +743,26 @@ span {
     text-align: center;
   }
   .team {
-    width: 320px;
-    height: 1670.15px;
+    width: 100%;
   }
   .team__person {
-    width: 280px;
+    width: 100%;
     height: 2252px;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    margin-top: 35px;
   }
   .team__person__card {
-    width: 280px;
-    height: 521px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .card__pic {
     width: 280px;
     height: 227.25px;
-    padding-right: 50px;  
+    object-fit: cover;
   }
   .card__name {
     font-family: Raleway;
@@ -754,35 +771,48 @@ span {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    align-self: flex-start;
+    padding-left: 20px;
   }
   .card__job {
+    width: 100%;
     font-family: Raleway;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
+    padding-left: 20px;
+    margin: 0;
+    margin-bottom: 38.49px;
   }
   .card__desc {
+    width: 100%;
     font-family: Raleway;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: left;    
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 55.15px;
   }
   .card__socialnetwork {
-    width: 130px;
+    width: 100%;
     height: 39.61px;
+    padding-left: 20px;
   }
   .facebook__pic {
     width: 39.61px;
     height: 39.61px;
   }
   .testimonials {
-    width: 320px;
+    width: 100%;
     height: 570.49px;
-    margin-top: 550px;
+  }
+  .pic {
+    width: 320px;
+    height: 212px;
   }
   .testimonials__main {
     width: 320px;
@@ -790,23 +820,30 @@ span {
     display: flex;
     flex-direction: column;
   }
-  .pic {
+  .main__article {
     width: 320px;
-    height: 212px;
+    height: 326px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
   }
   .article__text_1 {
-    width: 275px;
-    height: 206px;
+    width: 100%;
+    height: auto;
     font-family: Cardo;
-    font-size: 24px;
+    font-size: 22px;
     font-style: italic;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0em;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 46px;
+    display: flex;
   }
   .article__text_2 {
-    width: 275px;
+    width: 100%;
     height: 25px;
     font-family: Raleway;
     font-size: 12px;
@@ -816,27 +853,34 @@ span {
     text-align: left;
   }
   .dots__footer {
-    width: 129.49px;
-    height: 9.49px;
+    width: 100%;
+    height: 32.49px;
+    padding-top: 23px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding-left: 65px;
+  }
+  .dots {
+    height: 9.49px;
+  }
+  .dots__pic {
+    width: 9.49px;
+    height: 9.49px;
+    margin: 0 0 0 20.51px;
   }
   .download {
-    width: 320px;
+    width: 100%;
     height: auto;
     display: flex;
-    margin-left: -150px;
-    margin-bottom: 45px;
+    margin: -50px 0 45px -150px;
   }
   .download__content {
-    width: 280px;
+    width: 100%;
     height: 204px;
   }
   .content__text_1 {
-    width: 280px;
+    width: 100%;
     height: 80px;
-    top: 5700px;
-    left: 20px;
     font-family: Raleway;
     font-size: 18px;
     font-weight: 500;
@@ -866,11 +910,11 @@ span {
     text-align: center;
   }
   .footer {
-    width: 320px;
+    width: 100%;
     height: 540px;
   }
   .footer__upper {
-    width: 320px; 
+    width: 100%;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -896,10 +940,10 @@ span {
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: center; 
+    text-align: center;
   }
   .footer__upper__social {
-    width: 279px;
+    width: 100%;
     height: 85.71px;
     margin-top: 36.7px;
   }
@@ -913,14 +957,20 @@ span {
     display: flex;
     justify-content: center;
   }
+  .social__network {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
   .social__link {
     width: 33px;
     height: 33px;
   }
   .footer__upper__about {
-    width: 279px;
+    width: 100%;
     height: 102.71px;
-    margin-top: 59.5px; 
+    margin-top: 59.5px;
   }
   .about__title {
     font-family: Raleway;
@@ -937,10 +987,10 @@ span {
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: center; 
+    text-align: center;
   }
   .footer__lower {
-    width: 320px;
+    width: 100%;
     height: 90px;
   }
   .lower__text {
@@ -951,10 +1001,4 @@ span {
     letter-spacing: 0em;
     text-align: center;
   }
-
-
-
-
-
-  
 }
