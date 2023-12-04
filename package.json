@@ -1,0 +1,17 @@
+{
+  "name": "coursework-html-css",
+  "version": "1.0.0",
+  "source": "coursework.html",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "sass": "^1.69.5"
+  }
+}
